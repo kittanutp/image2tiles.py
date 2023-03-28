@@ -4,7 +4,12 @@ Takes a large image as the input, outputs map tiles
 at the appropriate size and file structure for use
 in frameworks like leaflet.js, MapBox, etc.
 
-## Inspired by
+##DEPENDENCIES
+
+This code is written by intention of repalcement on gdal2tiles.py on non-geographic image (ex floor plan)
+It is writen by mostly native python library.
+
+## INSPIRED BY
 
 https://github.com/danizen/campaign-map/blob/master/gentiles.py and https://github.com/bramus/photoshop-google-maps-tile-cutter/blob/master/PS_Bramus.GoogleMapsTileCutter.jsx
 
@@ -20,7 +25,7 @@ x value until no image to slice.
 Starting position of first tile (0,0) is top left of the image, it can be modify to other position by calculat new (top, left, right, bottom) which associate with
 image full width and height.
 
-## Way more info here
+## TECHNICAL INFO
 
 http://wiki.openstreetmap.org/wiki/Slippy_map_tilenames#Resolution_and_Scale
 
@@ -34,3 +39,10 @@ This is the standard arrangement (some frameworks let
 you specify others), and should be noted in your Javascript.
 For example, if using leaflet.js, you would use:
     tiles/{z}/{x}/{y}.png
+## TO USE
+
+```python
+image = Image.open('your_image.png')
+out_path = Path('output_folder')
+img2tiles(image, 0, 5, out_path)
+```
