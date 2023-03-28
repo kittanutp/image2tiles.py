@@ -1,5 +1,6 @@
-"""
-Inspired by 
+##Image2Tiles
+
+#Inspired by 
 "https://github.com/danizen/campaign-map/blob/master/gentiles.py" 
 and 
 "https://github.com/bramus/photoshop-google-maps-tile-cutter/blob/master/PS_Bramus.GoogleMapsTileCutter.jsx"
@@ -8,7 +9,7 @@ Takes a large image as the input, outputs map tiles
 at the appropriate size and file structure for use
 in frameworks like leaflet.js, MapBox, etc.
 
-DETAILS:
+#DETAILS:
 Resulting tiles are 256px square, regardless of the
 size of the source image. The number of tiles wide/
 high is determined by the "zoom level", which is
@@ -25,10 +26,10 @@ Starting position of first tile (0,0) is top left of the image, it can be modify
 to other position by calculat new (top, left, right, bottom) which associate with
 image full width and height.
 
-Way more info here:
+#Way more info here:
 http://wiki.openstreetmap.org/wiki/Slippy_map_tilenames#Resolution_and_Scale
 
-FILE STRUCTURE
+#FILE STRUCTURE
 Slippy maps require tiles to be stored in a specific
 file structure:
     output_folder/zoom_level/x/y.png
@@ -37,5 +38,3 @@ This is the standard arrangement (some frameworks let
 you specify others), and should be noted in your Javascript.
 For example, if using leaflet.js, you would use:
     tiles/{z}/{x}/{y}.png
-
-"""
