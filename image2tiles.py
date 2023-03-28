@@ -65,8 +65,7 @@ def generate(image :Image.Image, outpath: Path, zoom_level: int, resize_width: i
             tile_path = outpath.joinpath(f'{x}/{y}.png')
             tile.save(tile_path)
 
-def img2tiles(bytes: bytes, zoom_min: int, zoom_max: int, output_path: Path, resize_width = 256):
-    image = Image.open(BytesIO(bytes))
+def img2tiles(image: Image.Image, zoom_min: int, zoom_max: int, output_path: Path, resize_width = 256):
     image = sizing_adjust(image)
     for z in range(zoom_min, zoom_max+1):
         generate(image, output_path, z, resize_width)
