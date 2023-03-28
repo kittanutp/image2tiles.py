@@ -4,7 +4,7 @@ Takes a large image as the input, outputs map tiles
 at the appropriate size and file structure for use
 in frameworks like leaflet.js, MapBox, etc.
 
-##DEPENDENCIES
+## DEPENDENCIES
 
 This code is written by intention of repalcement on gdal2tiles.py on non-geographic image (ex floor plan)
 It is writen by mostly native python library.
